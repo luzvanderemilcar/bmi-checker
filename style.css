@@ -33,3 +33,7 @@ section {
 .green-text {
     color: #006A08;
 }
+
+#result {
+ min-height: 500px;
+}
