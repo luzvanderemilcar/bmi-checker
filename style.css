@@ -38,9 +38,14 @@ section {
  min-height: 500px;
 }
 
+#input-box label {
+    font-weight: bold;
+}
+
 #input-box span {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-gap: 5px;
     align-items: center;
+    font-weight: bold;
 }
