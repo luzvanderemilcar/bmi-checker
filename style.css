@@ -18,7 +18,7 @@ section {
   border-radius: 5%;
 }
 
-#input {
+#input-box {
   background-color: lightgray;
 }
 
@@ -34,6 +34,13 @@ section {
     color: #006A08;
 }
 
-#result {
+#result-box {
  min-height: 500px;
+}
+
+#input-box span {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 5px;
+    align-items: center;
 }

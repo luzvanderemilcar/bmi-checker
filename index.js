@@ -12,6 +12,7 @@ const $weightInput = $("#weight-input");
 const $heightInput = $("#height-input");
 const $result = $("#result");
 const $calculateBtn = $("#calculate-bmi");
+const $infoOnResult = $("#result-info");
 
 $calculateBtn.on("click", checker);
 
@@ -50,7 +51,9 @@ function checker() {
             bmi >= 18.5 && bmi < 24.9 ? NORMAL :
             bmi >= 25 && bmi < 30 ? OVERWEIGHT :
             OBESITY;
-        $result.html(testResult);
+        $result.html("Your Body Mass Index (BMI) is : " + bmi);
+        $infoOnResult.html(testResult);
+        
         
 //scroll the results to top
 $(window).scrollTop($result.position().top)
