@@ -35,8 +35,14 @@ section {
     color: #006A08;
 }
 
+#input-box .info {
+ margin-top: 2%;
+ text-transform: uppercase;
+}
+
 #input-box label {
-    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom : 0;
 }
 
 #input-box span {
@@ -48,11 +54,11 @@ section {
 }
 
 #result-box .container {
-    min-height: 500px;
     background-color: #f8f8f8;
     border-radius: 5%;
 }
 
 #result {
     font-size: 1.25rem;
+    margin-block: 2%;
 }
