@@ -17,8 +17,10 @@
     <div class="container">
           <h5>BMI CHECKER</h5>
           <hr>
-          <h2>BMI</h2>
-          <p>BMI stands for Body Mass Index. It's an indicator that helps checking the body mass of a an human adult according to his weight and height. This indicator keeps on the track the risks of overweight.</p>
+          <div id="title-div">
+             <h2>BMI</h2>
+             <p>BMI stands for Body Mass Index. It's an indicator that helps checking the body mass of a human adult according to his weight and height. This indicator keeps on the track the risks of overweight.</p>  
+          </div>
     </div>
   </section>
   <section id="input-box" class="col-md-4 col-lg-5">
@@ -40,10 +42,9 @@
   </section>
   <section id="result-box" class="col-md-7 col-lg-8">
     <div class="container">
-      <div>
       <p id="result"></p>
       <div id="result-info"></div>
-      </div>
+      <button id="reset-button" class='btn btn-danger reset'>Reset</button>
     </div>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

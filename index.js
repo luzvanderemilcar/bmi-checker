@@ -9,16 +9,19 @@ const OBESITY = "<h3 class='red-text'>Obesity</h3><p>Your are at risk of heart d
 //Defining DOM elements with jQuery
 const $weightInput = $("#weight-input");
 const $heightInput = $("#height-input");
+const $resultBox = $("#result-box");
 const $result = $("#result");
-const $calculateBtn = $("#calculate-bmi");
+const $calculateButton = $("#calculate-bmi");
 const $infoOnResult = $("#result-info");
+const $resetButton = $("#reset-button");
 
 //Event listener for checking bmi
-$calculateBtn.on("click", checkBmi);
+$calculateButton.on("click", checkBmi);
 
 // Execute a function when the user presses a key on the keyboard
 $heightInput.on("keypress", checkBmiWithEnter);
-
+//Reset checking 
+$resetButton.on("click", reset);
 // Handle enter (Go) key press inside an element
 function checkBmiWithEnter(e) {
     // If the user presses the "Enter" key on the keyboard
@@ -26,7 +29,7 @@ function checkBmiWithEnter(e) {
         // Cancel the default action, if needed
         e.preventDefault();
         // Trigger the button element with a click
-        $calculateBtn.click();
+        $calculateButton.click();
     }
 }
 
@@ -53,7 +56,9 @@ function checkBmi() {
             bmi >= 25 && bmi < 30 ? OVERWEIGHT :
             OBESITY;
         $result.html("Your Body Mass Index (BMI) is : <strong>" + precise(bmi) + "</strong><hr>");
-        $infoOnResult.html(testResult);
+        $("#input-box").css("display", "none");
+        $resultBox.css("display", "block");
+        $infoOnResult.prepend(testResult);
 
 
         //scroll the results to top
@@ -62,6 +67,14 @@ function checkBmi() {
     else if (bmi <= 0) {
         $result.html("Check your Input and Try again");
     }
+}
+
+function reset() {
+      $result.html("");
+      $("#input-box").css("display", "block");
+      $resultBox.css("display", "none");
+      $infoOnResult.html("");
+      $("input[type=number]").val("");
 }
 
 //To change the number of digit after the comma

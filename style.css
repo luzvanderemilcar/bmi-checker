@@ -53,12 +53,23 @@ section {
     font-weight: bold;
 }
 
-#result-box .container {
+#result-box {
+    position: relative;
+    display: none;
     background-color: #f8f8f8;
     border-radius: 5%;
+    margin :  auto 10px 5%;
 }
 
 #result {
     font-size: 1.25rem;
     margin-block: 2%;
+}
+
+#reset-button {
+    position: absolute;
+    display: inherit;
+    margin-top: 3%;
+    right: 10px;
+    bottom:0;
 }
